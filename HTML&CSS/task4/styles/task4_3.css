@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#container {
+  width: 400px;
+  height: 200px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -200px;
+  overflow: hidden;
+}
+#container::before,#container::after {
+  content: "";
+  background-color: #fc0;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: absolute;
+}
+#container::before {
+  top: -50px;
+  left: -50px;
+}
+#container::after {
+  bottom: -50px;
+  right: -50px;
+}
