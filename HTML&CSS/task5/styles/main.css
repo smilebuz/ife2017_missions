@@ -1,0 +1,168 @@
+* {
+  font-family: 'SimHei';/*黑体*/
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #D0D0D0;
+}
+ul {
+  list-style-type: none;
+}
+article, aside {
+  background-color: #FFFFFF;
+}
+/*header*/
+header {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  background-color: black;
+}
+header #logo {
+  width: 40px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+header nav {
+  position: absolute;
+  right: 20px;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+img {
+  width: 25%;
+}
+/*article*/
+article {
+  margin-left: 20px;
+  margin-right: 480px;
+  font-size: 15.6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+article h1 {
+  padding-top: 40px;
+}
+article .article-info {
+  font-size: 14px;
+}
+/*first and second articles*/
+article.article {
+  line-height: 1.5;
+}
+article p.p-indent {
+  text-indent: 2em;
+}
+/*article gallery class*/
+article.gallery::before,article.gallery::after {
+  content: "";
+  display: table;
+}
+article.gallery::after {
+  clear: both;
+}
+article.gallery {
+  margin-top: 20px;
+  *zoom: 1;
+}
+article.gallery li {
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 20px;
+  padding: 10px;
+  width: 150px;
+  height: 120px;
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+article.gallery li span {
+  font-size: 12px;
+  text-align: center;
+}
+article.gallery li img {
+  width: 150px;
+  margin-top: 10px;
+}
+/*last article*/
+article.article-form ol li {
+  line-height: 1.5;
+}
+article.article-form table {
+  width: 100%;
+  border-collapse: collapse;
+  border-color: #D0D0D0;
+}
+article.article-form table thead {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+article.article-form table .last-row {
+  background-color: #D0D0D0;
+  font-weight: bold;
+}
+article.article-form table td {
+  padding: 5px;
+}
+/*aside*/
+aside {
+  width: 400px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  padding: 10px 20px 20px 20px;
+}
+aside h4 {
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 3px solid #D0D0D0;
+}
+aside form div,aside form p {
+  margin-left: 13px;
+}
+aside form div {
+  margin-top: 10px;
+}
+aside form .tip {
+  text-indent: 10em;
+  color: #D0D0D0;
+  font-size: 12px;
+}
+aside .password label {
+  padding-left: 2em;
+}
+aside .sex,.city,.hobby label {
+  padding-left: 5em;
+}
+aside .description label {
+  padding-left: 3em;
+  vertical-align: top;
+}
+aside form input[type=submit]{
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  border-width: 0;
+  background-color: #0077bb;
+  color: #FFFFFF;
+  font-size: 15px;
+  height: 40px;
+  border-radius: 5px;
+}
+/*footer*/
+footer {
+  background-color: #000;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
