@@ -145,3 +145,11 @@ aside form input[type=submit]{
   height: 40px;
   border-radius: 5px;
 }
+/*footer*/
+footer {
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
