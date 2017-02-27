@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#container {
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -200px;
+}
+#container .fan {
+  width: 100px;
+  height: 100px;
+  background-color:#fc0;
+  border-radius: 100%;
+  position: absolute;
+}
+#container #fan-left-top {
+  top: -50px;
+  left: -50px;
+}
+#container #fan-right-bottom {
+  bottom: -50px;
+  right: -50px;
+}
+#container .fancover {
+  background-color: #fff;
+  width: 50px;
+  position: absolute;
+}
+#container #fancover-left-top1 {
+  height: 100px;
+  left: -50px;
+  top: -50px;
+}
+#container #fancover-left-top2 {
+  height: 50px;
+  left: 0;
+  top: -50px;
+}
+#container #fancover-right-bottom1 {
+  height: 100px;
+  right: -50px;
+  bottom: -50px;
+}
+#container #fancover-right-bottom2 {
+  height: 50px;
+  right: 0;
+  bottom: -50px;
+}
