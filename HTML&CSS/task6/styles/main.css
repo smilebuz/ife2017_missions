@@ -165,19 +165,23 @@ header #logo span {
 }
 #article2 #how ul {
   margin-top: 40px;
+  overflow: auto;
 }
 #article2 #how ul .percent-title {
   color: #231815;
+  float: left;
 }
 #article2 #how ul li {
   line-height: 16px;
   font-size: 12px;
   font-family: Microsoft YaHei;
   list-style-type: none;
+  width: 70%;
 }
 #article2 #how ul .percent {
   font-style: italic;
   color: #cd4a48;
+  float: right;
 }
 /*article3*/
 #article3 {
@@ -254,6 +258,11 @@ header #logo span {
   opacity: 0.4;
   font-family: Microsoft YaHei;
 }
+#article3 #right #right-title #image-cover #titles {
+  height: 44px;
+  padding-top: 8.5px;
+  padding-bottom: 8.5px;
+}
 #article3 #right #right-title #image-cover #title {
   font-size: 26px;
   color: #000000;
@@ -277,6 +286,10 @@ header #logo span {
   position: absolute;
   top: 20px;
   left: 20px;
+  width: 80%;
+}
+#article3 #right #right-content .catalog p{
+  overflow: auto;
 }
 #article3 #right #right-content .catalog .index {
   font-size: 16px;
@@ -284,7 +297,7 @@ header #logo span {
   color: #5a5b5b;
   line-height: 20px;
   padding-bottom: 10px;
-
+  float: left;
 }
 #article3 #right #right-content .index::before {
   content: "";
@@ -301,6 +314,9 @@ header #logo span {
   text-align: right;
   font-size: 12px;
   font-style: italic;
+  margin-right: 5px;
+  margin-top: 4px;
+  float: right;
 }
 #article3 #right #right-content #white-words {
   width: 260px;
