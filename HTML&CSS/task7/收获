@@ -1,0 +1,11 @@
+1. background-image 父元素宽度100% background-size设置成100% auto即可自由铺展
+2. letter-spacing调整字间距
+问题：点击按钮后按钮边框变蓝
+3. 水平居中:margin:0 auto;
+4. background-position
+5. 通过appearance:none自定义select样式
+问题：select默认值
+6. 居中display: flex;justify-content: center;
+7. translateY(-50%)原理
+问题: aria-hidden?
+8. 添加伪类时要考虑css的优先级

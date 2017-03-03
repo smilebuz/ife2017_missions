@@ -1,0 +1,660 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-width: 1280px;
+}
+/*header*/
+header {
+  height: 60px;
+  background: #ffffff;
+  position: relative;
+}
+header .logo,header .sign {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header #logo_img {
+  height: 30px;
+  left: 50px;
+}
+header #logo_text {
+  left: 90px;
+  font-size: 20px;
+  font-family: 'SimHei';
+}
+header nav {
+  height: 100%;
+  position: absolute;
+  right: 140px;
+}
+header nav ul {
+  height: 100%;
+}
+header nav ul li {
+  display: inline;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 20px;
+}
+header nav ul li a {
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: #000000;
+}
+header nav ul li #index::before,
+header nav ul li #index::after {
+  content:"首";
+  visibility: hidden;
+}
+header nav ul li a:hover {
+  color: #d45d5c;
+  border-bottom: 2px #d45d5c solid;
+}
+header .sign {
+  cursor: pointer;
+}
+header #sign_img {
+  width: 16px;
+  right: 80px;
+}
+header #sign_text {
+  font-size: 15px;
+  right: 45px;
+  color: #d45d5c;
+}
+/*jumbotron*/
+#jumbotron {
+  width: 100%;
+  height: 855px;
+  background-image: url(../images/jumbotron_background.jpg);
+  background-color: #d45d5c;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#jumbotron #slogan {
+  position: absolute;
+  top: 50%;
+  left: 140px;
+  transform: translateY(-50%);
+}
+#jumbotron #slogan .slogan {
+  color: #ffffff;
+}
+#jumbotron #slogan #slogan-en {
+  font-size: 56px;
+}
+#jumbotron #slogan #slogan-en::first-letter {
+  text-transform: capitalize;
+}
+#jumbotron #slogan .slogan-cn {
+  font-size: 20px;
+}
+#jumbotron #slogan #first-line {
+  margin-top: 20px;
+}
+#jumbotron #slogan #second-line {
+  margin-top: 2px;
+  margin-bottom: 60px;
+}
+#jumbotron #slogan #slogan-btn {
+  border-width: 0;
+  background-color: #FF5252;
+  width: 300px;
+  height: 60px;
+  font-size: 28px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+/*advantages*/
+#advantages {
+  width: 100%;
+  overflow: auto;
+}
+#advantages .adv_combination {
+  width: 25%;
+  text-align: center;
+  float: left;
+  color: #9E9E9E;
+}
+#advantages .adv_combination:hover {
+  color: #d45d5c;
+}
+#advantages .adv_combination .adv_image {
+  margin: 40px 0 40px 0;
+}
+#advantages .adv_combination .adv_content {
+  border-right: 2px solid #9E9E9E;
+  height: 50px;
+  margin-bottom: 40px;
+}
+#advantages .adv_combination .adv_content .adv_words {
+  font-size: 14px;
+  font-family: 'SimHei';
+  width: 11em;
+  margin: 0 auto;
+}
+#advantages .adv_combination #cultivation {
+  border-right-width: 0;
+}
+/*wonders*/
+#wonder {
+  width: 100%;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+#wonder #wonder_image {
+  margin: 60px 0 40px 0;
+}
+#wonder #wonder_content {
+  font-size: 50px;
+  font-family: 'SimHei';
+  color: #9E9E9E;
+  padding-bottom: 60px;
+}
+/*search*/
+#search {
+  width: 100%;
+  height: 340px;
+  background-image: url(../images/search_background.jpg);
+  background-color: #d45d5c;
+  background-size: 100% auto;
+  text-align: center;
+}
+#search .search {
+  color: #ffffff;
+}
+#search #search_title {
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+#search #search_subtitle {
+  font-size: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+#search #white_space {
+  width: 30px;
+  border-bottom: 2px #ffffff solid;
+  margin: 0 auto;
+}
+#search li {
+  display: inline;
+  margin-right: 20px;
+}
+#search .picker {
+  border-color: #ffffff;
+  width: 235px;
+  padding: 8px;
+  color: #757575;
+  -webkit-appearance: none;
+  background-image: url(../images/select_arrow.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 206px;
+}
+#search .picker:focus {
+  border-color: #d45d5c;
+}
+#search #search_btn {
+  width: 235px;
+  border-width: 0;
+  background-color: #d45d5c;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+/*activity*/
+#activity {
+  width: 100%;
+  background-color: #EEEEEE;
+  overflow: auto;
+}
+#activity #city_container{
+  overflow: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+#activity #city_container .activity_city {
+  float: left;
+  text-align: center;
+  margin-right: 40px;
+}
+#activity #city_container #activity_hongkong {
+  margin-right: 0;
+}
+#activity #city_container .activity_title {
+  font-size: 14px;
+  margin-top: 10px;
+}
+#activity #city_container .activity_subtitle {
+  color: #757575;
+  font-size: 12px;
+  margin-top: 10px;
+}
+#activity #city_container #activity_shanghai #shanghai_title {
+  font-size: 23px;
+  letter-spacing: 35px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#activity #city_container #activity_shanghai #shanghai_subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#activity #city_container #activity_shanghai #shanghai_title #last_letter {
+  letter-spacing: 0;
+}
+/*advertisement_beijing*/
+#advertisement_beijing {
+  width: 100%;
+  height: 565px;
+  background-image: url(../images/advertisement_beijing.jpg);
+  background-size: 66.6% auto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#advertisement_beijing #ad_beijing_title {
+  width: 66.6%;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+}
+#advertisement_beijing #ad_beijing_title #ad_beijing_title_bg_cn {
+  font-size: 50px;
+}
+#advertisement_beijing #ad_beijing_title #ad_beijing_title_bg_en {
+  font-size: 160px;
+}
+#advertisement_beijing #ad_beijing_title #ad_beijing_location {
+  font-size: 23px;
+}
+#advertisement_beijing #ad_beijing_title #ad_beijing_time {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#advertisement_beijing #ad_beijing_detail {
+  width: 33.4%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+#advertisement_beijing #ad_beijing_detail #left_triangle {
+  width: 0;
+  height: 0;
+  border: 18px solid #ffffff;
+  border-right-width: 30px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  margin-left: -45px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#advertisement_beijing #ad_beijing_detail #ad_content {
+  text-align: center;
+  margin-top: 180px;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #ad_content_title {
+  font-size: 20px;
+  font-family: 'SimHei';
+  margin-bottom: 30px;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #ad_content_title #ad_content_title_number {
+  color: #E53935;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #ad_content_detail {
+  color: #757575;
+  font-size: 12px;
+  font-family: 'SimHei';
+  letter-spacing: 1px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 50px;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #ad-more {
+  background-color: #ffffff;
+  color: #FF5252;
+  border: 1px #FF5252 solid;
+  padding: 8px 25px 8px 25px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #ad-more:hover {
+  background-color: #FF5252;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #circle {
+  overflow: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #circle .circle {
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border: 1px solid #757575;
+  float: left;
+  margin-right: 15px;
+  cursor: pointer;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #circle #circle_chosen {
+  background-color: #757575;
+  border: 1px solid #ffffff;
+}
+#advertisement_beijing #ad_beijing_detail #ad_content #circle #last_circle {
+  margin-right: 0;
+}
+/*info*/
+#info {
+  width: 100%;
+  height: 518px;
+  background-image: url(../images/info_background.jpg);
+  background-position: right;
+  background-size: 33.4% auto;
+  background-repeat: no-repeat;
+}
+#info .info {
+  width: 33.3%;
+  height: 100%;
+  font-family: 'SimHei';
+  position: relative;
+  float: left;
+}
+#info .info .info_content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#info .info .info_title,#info .info .info_subtitle {
+  font-size: 20px;
+}
+#info .info .info_title {
+  margin-bottom: 10px;
+}
+#info .info .info_subtitle {
+  margin-bottom: 20px;
+}
+#info .info .info_space_line {
+  width: 30px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin: 0 auto;
+}
+#info .info .info_more {
+  border-width: 1px;
+  border-style: solid;
+  font-size: 20px;
+  font-family: 'SimHei';
+  padding: 8px 35px 8px 35px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#info #info_red {
+  background-color: #ff5252;
+}
+#info #info_red {
+  color: #ffffff;
+}
+#info #info_red #info_more_red {
+  background-color: #ff5252;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+#info #info_red #info_more_red:hover{
+  background-color: #ffffff;
+  color: #ff5252;
+  border-color: #ff5252;
+}
+#info #info_white #info_space_line_grey {
+  border-bottom-color: #757575;
+}
+#info #info_white #info_more_white {
+  border-color: #ff5252;
+  color: #ff5252;
+  background-color: #ffffff;
+}
+#info #info_white #info_more_white:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: #ff5252;
+}
+#info #info_white #right_triangle {
+  width: 0;
+  height: 0;
+  border: 18px solid #ffffff;
+  border-left-width: 30px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  margin-right: -45px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/*volunteer*/
+#volunteer {
+  width: 100%;
+  padding-bottom: 150px;
+}
+#volunteer #volunteer_title {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'SimHei';
+  padding-top: 120px;
+  padding-bottom: 5px;
+}
+#volunteer #volunteer_space_line {
+  margin: 0 auto;
+  width: 30px;
+  border-bottom: 2px solid #ff5252;
+}
+#volunteer #volunteer_subtitle {
+  text-align: center;
+  font-size: 12px;
+  color: #757575;
+  padding-top: 10px;
+  padding-bottom: 120px;
+}
+#volunteer #volunteer_content {
+  width: 100%;
+  overflow: auto;
+}
+#volunteer #volunteer_content #volunteer_middle {
+  width: 980px;
+  overflow: auto;
+  margin: 0 auto;
+}
+#volunteer #volunteer_content #clause {
+  margin-right: 30px;
+  float: left;
+}
+#volunteer #volunteer_content #clause .clause {
+  width: 280px;
+  overflow: auto;
+  margin-bottom: 30px;
+}
+#volunteer #volunteer_content #clause .clause .clause_title {
+  font-size: 15px;
+  font-family: 'SimHei';
+  margin-bottom: 20px;
+}
+#volunteer #volunteer_content #clause .clause .clause_detail {
+  font-size: 12px;
+  font-family: 'SimHei';
+  line-height: 20px;
+  color: #757575;
+}
+#volunteer #volunteer_content #clause .clause .more_detail {
+  font-size: 5px;
+  color: #757575;
+  float: right;
+}
+#volunteer #volunteer_content #clause_more {
+  margin-bottom: 0;
+}
+#volunteer #volunteer_content #clause_more #clause_more_title {
+  margin-bottom: 0;
+}
+#volunteer #volunteer_content #form {
+  float: right;
+  width: 640px;
+  height: 309px;
+  margin-left: 30px;
+}
+#volunteer #volunteer_content #form .form_input {
+  width: 295px;
+  padding-top: 8px;
+  padding-left: 15px;
+  padding-bottom: 11px;
+  background-color: #E0E0E0;
+  float: left;
+}
+#volunteer #volunteer_content #form .form_input label {
+  font-size: 13px;
+  font-family: 'SimHei';
+}
+#volunteer #volunteer_content #form .form_input input {
+  border-width: 0;
+  background-color: #e0e0e0;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  font-size: 13px;
+}
+#volunteer #volunteer_content #form #form_input_name, #volunteer #volunteer_content #form #form_input_contact{
+  margin-right: 20px;
+}
+#volunteer #volunteer_content #form #form_input_contact, #volunteer #volunteer_content #form #form_input_address {
+  margin-top: 15px;
+}
+#volunteer #volunteer_content #form #form_input_desc {
+  background-color: #e0e0e0;
+  float: left;
+  margin-top: 15px;
+  font-family: 'SimHei';
+  padding-top: 8px;
+}
+#volunteer #volunteer_content #form #form_input_desc #label_desc {
+  font-size: 13px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+#volunteer #volunteer_content #form #form_input_desc textarea {
+  border-width: 0;
+  background-color: #e0e0e0;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  font-size: 13px;
+  padding-right: 3px;
+}
+#volunteer #volunteer_content #form #volunteer_submit {
+  margin-top: 15px;
+  width: 640px;
+  background-color: #e0e0e0;
+  border-width: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  font-family: 'SimHei';
+}
+/*contact*/
+#contact {
+  width: 100%;
+  height: 360px;
+  background-color: #37474F;
+  color: #ffffff;
+  font-family: 'SimHei';
+}
+#contact #contact_title {
+  font-size: 20px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+#contact #contact_detail {
+  font-size: 12px;
+  line-height: 18px;
+}
+#contact #contact_title,#contact #contact_detail {
+  text-align: center;
+}
+#contact #contact_email {
+  height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#contact input[name=contact_email] {
+  height: 100%;
+  width: 420px;
+  font-size: 15px;
+  border-width: 0;
+  padding-left: 10px;
+}
+#contact #contact_send_btn {
+  background-color: #BDBDBD;
+  border-width: 0;
+  height: 100%;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: -8px;
+  color: #ffffff;
+  font-family: 'SimHei';
+}
+#contact #contact_send_btn::first-letter {
+  letter-spacing: 10px;
+}
+#contact #contact_icon {
+  text-align: center;
+}
+#contact #contact_icon .fa {
+  color: #fff;
+  margin-right: 20px;
+}
+/*footer*/
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #263238;
+  position: relative;
+}
+footer #copyright {
+  color: #ffffff;
+  font-family: 'SimHei';
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+}
+footer #top_link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'SimHei';
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+}

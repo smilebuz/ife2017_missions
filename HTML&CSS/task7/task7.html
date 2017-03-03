@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task7</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header id="header">
+      <img src="images/header_icon1.png" alt="new world logo" id="logo_img" class="logo">
+      <span id="logo_text" class="logo">新世界</span>
+      <nav>
+        <ul>
+          <li><a href="#1" id="index">首页</a></li>
+          <li><a href="#2">最新活动</a></li>
+          <li><a href="#3">项目介绍</a></li>
+          <li><a href="#4">爱心社区</a></li>
+          <li><a href="#5">关于我们</a></li>
+        </ul>
+      </nav>
+      <span id="sign_text" class="sign">登录</span>
+      <img src="images/header_icon2.jpg" alt="sign image" id="sign_img" class="sign">
+    </header>
+    <div id="jumbotron">
+      <div id="slogan">
+        <p class="slogan" id="slogan-en">time of new life</p>
+        <p class="slogan slogan-cn" id="first-line">新时代，年轻的人们让我们一起</p>
+        <p class="slogan slogan-cn" id="second-line">体验新生活，享受新生活</p>
+        <button href="#" class="slogan" id="slogan-btn">开始体验</button>
+      </div>
+    </div>
+    <div id="advantages">
+      <div class="adv_combination">
+        <img src="images/advantages_icon1.jpg" alt="new worldview" class="adv_image">
+        <div class="adv_content" id="worldview">
+          <p class="adv_words">打造全新世界观，让你更爱你的生活</p>
+        </div>
+      </div>
+      <div class="adv_combination">
+        <img src="images/advantages_icon2.jpg" alt="plenty of volunteer activities" class="adv_image">
+        <div class="adv_content" id="volunteers">
+          <p class="adv_words">丰富多彩的公益活动，发挥新世界的主人公意识</p>
+        </div>
+      </div>
+      <div class="adv_combination">
+        <img src="images/advantages_icon3.jpg" alt="new life methods" class="adv_image">
+        <div class="adv_content" id="newlifemethods">
+          <p class="adv_words">时尚的新理念，超前体验未知的生活</p>
+        </div>
+      </div>
+      <div class="adv_combination">
+        <img src="images/advantages_icon4.jpg" alt="perfect cultivation mechanism" class="adv_image">
+        <div class="adv_content" id="cultivation">
+          <p class="adv_words">完善的培养机制，培养你全新的世界观</p>
+        </div>
+      </div>
+    </div>
+    <div id="wonder">
+      <img src="images/header_icon1.png" alt="logo of new world" id="wonder_image">
+      <p id="wonder_content">关于新世界，你不知道的还有什么？</p>
+    </div>
+    <div id="search">
+      <p id="search_title" class="search">查找新世界城市活动信息</p>
+      <div class="space_line" id="white_space">
+
+      </div>
+      <p id="search_subtitle" class="search">每个城市都有不同的活动信息，请自主查询您所需要了解的城市</p>
+      <ul>
+        <li>
+          <select class="picker" id="country_picker">
+            <option value="China">中国</option>
+            <option value="America">美国</option>
+          </select>
+        </li>
+        <li>
+          <select class="picker" id="province_picker">
+            <option value="" disabled selected hidden>省份</option>
+            <option value="beijing">北京市</option>
+            <option value="tianjin">天津市</option>
+            <option value="hebei">河北省</option>
+            <option value="shanxi">陕西省</option>
+            <option value="neimenggu">内蒙古自治区</option>
+            <option value="liaoning">辽宁省</option>
+          </select>
+        </li>
+        <li>
+          <select class="picker" id="city_picker">
+            <option value="" disabled selected hidden>城市</option>
+          </select>
+        </li>
+        <li>
+          <button type="button" id="search_btn">搜索</button>
+        </li>
+      </ul>
+    </div>
+    <div id="activity">
+      <div id="city_container">
+        <div class="activity_city" id="activity_beijing">
+          <img src="images/activity_beijing.jpg" alt="activity in beijing">
+          <p class="activity_title" id="beijing_title">北京活动</p>
+          <p class="activity_subtitle" id="beijing_subtitle">新社区大联盟</p>
+        </div>
+        <div class="activity_city" id="activity_shanghai">
+          <p class="activity_title" id="shanghai_title">上海活<span id="last_letter">动</span></p>
+          <p class="activity_subtitle" id="shanghai_subtitle">夜上海新景观探索</p>
+          <img src="images/activity_shanghai.jpg" alt="activity in shanghai">
+        </div>
+        <div class="activity_city" id="activity_shenzhen">
+          <img src="images/activity_shenzhen.jpg" alt="activity in shenzhen">
+          <p class="activity_title" id="shenzhen_title">深圳活动</p>
+          <p class="activity_subtitle" id="shenzhen_subtitle">全新海岸线观点站</p>
+        </div>
+        <div class="activity_city" id="activity_hongkong">
+          <img src="images/activity_hongkong.jpg" alt="activity in hongkong">
+          <p class="activity_title" id="hongkong_title">香港活动</p>
+          <p class="activity_subtitle" id="hongkong_subtitle">奢侈消费大派送</p>
+        </div>
+      </div>
+    </div>
+    <div id="advertisement_beijing">
+      <div id="ad_beijing_title">
+        <p id="ad_beijing_title_bg_cn">新世界</p>
+        <p id="ad_beijing_title_bg_en">TIME</p>
+        <p id="ad_beijing_location">@新世界 - 北京</p>
+        <p id="ad_beijing_time">2017.04.01</p>
+      </div>
+      <div id="ad_beijing_detail">
+        <div id="left_triangle">
+        </div>
+        <div id="ad_content">
+          <p id="ad_content_title">新世界/<span id="ad_content_title_number">01</span></p>
+          <span id="ad_content_detail">新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界</span>
+          <button type="button" id="ad-more">更多详情</button>
+          <div id="circle">
+            <div class="circle" id="circle_chosen">
+            </div>
+            <div class="circle">
+
+            </div>
+            <div class="circle" id="last_circle">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="info">
+      <div class="info" id="info_red">
+        <div class="info_content" id="info_red_content">
+          <p class="info_title" id="info_title_red">新时代</p>
+          <p class="info_subtitle" id="info_subtitle_red">关于爱生活的我们</p>
+          <div class="info_space_line" id="info_space_line_white">
+          </div>
+          <button type="button" class="info_more" id="info_more_red">查看更多</button>
+        </div>
+      </div>
+      <div class="info" id="info_white">
+        <div class="info_content" id="info_white_content">
+          <div id="right_triangle">
+
+          </div>
+          <p class="info_title" id="info_title_white">新时代</p>
+          <p class="info_subtitle" id="info_subtitle_white">关于爱生活的我们</p>
+          <div class="info_space_line" id="info_space_line_grey">
+          </div>
+          <button type="button" class="info_more" id="info_more_white">查看更多</button>
+        </div>
+      </div>
+    </div>
+    <div id="volunteer">
+      <p id="volunteer_title">成为我们的志愿者</p>
+      <div id="volunteer_space_line">
+      </div>
+      <p id="volunteer_subtitle">新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情，<br>那就不要犹豫，快来加入我们，成为改变所有人生活的人。</p>
+      <div id="volunteer_content">
+        <div id="volunteer_middle">
+          <div id="clause">
+            <div class="clause" id="clause_protocol">
+              <p class="clause_title">新世界志愿者协议</p>
+              <p class="clause_detail" id="clause_protocol_detail">加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等自愿的原则......</p>
+              <div class="more_detail">
+                <span>more</span>
+              </div>
+            </div>
+            <div class="clause" id="clause_privilege">
+              <p class="clause_title">新世界志愿者权利</p>
+              <p class="clause_detail" id="clause_privilege_detail">新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在新世界活动的优先参与资格......</p>
+              <div class="more_detail">
+                <span>more</span>
+              </div>
+            </div>
+            <div class="clause" id="clause_more">
+              <p class="clause_title" id="clause_more_title">更多条款</p>
+              <div class="more_detail">
+                <span>more</span>
+              </div>
+            </div>
+          </div>
+          <div id="form">
+            <form action="index.html">
+              <div class="form_input" id="form_input_name">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" value="" required="required">
+              </div>
+              <div class="form_input">
+                <label for="age">年龄：</label>
+                <input type="text" id="age" name="age" value="" required="required">
+              </div>
+              <div class="form_input" id="form_input_contact">
+                <label for="volunteer_contact">联系方式：</label>
+                <input type="text" id="volunteer_contact" name="volunteer_contact" value="" required="required">
+              </div>
+              <div class="form_input" id="form_input_address">
+                <label for="address">联系地址：</label>
+                <input type="text" id="address" name="address" value="" required="required">
+              </div>
+              <div id="form_input_desc">
+                <label for="desc" id="label_desc">请简单描述您梦想的生活：</label>
+                <textarea name="name" rows="8" cols="63"></textarea>
+              </div>
+              <input type="submit" name="volunteer_submit" value="提交申请" id="volunteer_submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+        <p id="contact_title">联系我们</p>
+        <p id="contact_detail">为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br>也可以通过以下任何方式关注我们动态</p>
+        <div id="contact_email">
+          <input type="email" name="contact_email" value="" placeholder="someone@email.com">
+          <button type="button" id="contact_send_btn">提<span id="contact_send_btn_last_letter">交</span></button>
+        </div>
+        <div id="contact_icon">
+          <i class="fa fa-qq fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-weibo fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-globe fa-lg" aira-hidden="true" id="last_contact_icon"></i>
+        </div>
+    </div>
+    <footer>
+      <span id="copyright">@2017新世界</span>
+      <a href="#header" id="top_link">Back to top</a>
+    </footer>
+  </body>
+</html>
