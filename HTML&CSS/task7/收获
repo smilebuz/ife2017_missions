@@ -9,3 +9,4 @@
 7. translateY(-50%)原理
 问题: aria-hidden?
 8. 添加伪类时要考虑css的优先级
+9. input不支持伪元素
