@@ -1,0 +1,26 @@
+1. 弄清圆角原理
+2. 去除input聚焦蓝色边框: outline:none;
+3. css选择器 相邻兄弟元素 +
+4. 特定元素子元素 >
+5. flex垂直居中原理
+6. margin: 0 auto; 原理
+7. flex布局？所有元素行宽有和父元素一样了？日历？
+9. :nth-of-type(n)选择器匹配同类型中的第n个同级兄弟元素
+
+margin:25px 50px 75px 100px;
+上边距为25px
+右边距为50px
+下边距为75px
+左边距为100px
+
+margin:25px 50px 75px;
+上边距为25px
+左右边距为50px
+下边距为75px
+
+margin:25px 50px;
+上下边距为25px
+左右边距为50px
+
+margin:25px;
+所有的4个边距都是25px

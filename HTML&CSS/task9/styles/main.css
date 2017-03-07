@@ -1,0 +1,792 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*header*/
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #2189c0;
+  position: relative;
+}
+header #search, header #login {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header #search {
+  width: 300px;
+  height: 30px;
+  background-color: #ffffff;
+  right: 200px;
+}
+header #search::before,header #search::after {
+  content:"";
+  height: 30px;
+  width: 15px;
+  background-color: #ffffff;
+  border-right: none;
+  position: absolute;
+}
+header #search::before {
+  border-radius: 15px 0 0 15px;
+  right: 300px;
+}
+header #search::after {
+  border-radius: 0 15px 15px 0;
+  left: 300px;
+}
+header #search #search_img {
+  width: 20px;
+  margin: 5px;
+  float: left;
+}
+header #search #search_input {
+  width: 245px;
+  height: 30px;
+  border-width: 0;
+  font-size: 14px;
+  vertical-align: middle;
+  padding-left: 10px;
+  background-color: #fff;
+  outline: none;
+}
+header #login {
+  right: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+header #login #login_img {
+  width: 20px;
+  vertical-align: middle;
+}
+header #login #login_text {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'SimHei';
+  vertical-align: middle;
+}
+/*aside*/
+aside {
+  width: 20%;
+  height: 1280px;
+  background-color: #2b2e3d;
+  float: left;
+}
+aside #user_info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+aside #user_info .user_info{
+  width: 100%;
+  text-align: center;
+  font-family: 'SimHei';
+}
+aside #user_info #user_head {
+  width: 50px;
+  vertical-align: middle;
+  padding-right: 4px;
+}
+aside #user_info #user_name {
+  color: #ffffff;
+  font-size: 16px;
+  vertical-align: middle;
+  padding-left: 4px;
+}
+aside #user_info #other_info {
+  width: 100%;
+  overflow: auto;
+  margin-top: 20px;
+}
+aside #user_info #other_info #user_collection,aside #user_info #other_info #user_fan {
+  box-sizing: border-box;
+  width: 50%;
+  color: #6c7e94;
+  line-height: 14px;
+}
+aside #user_info #other_info .user_info_text {
+  font-size: 13px;
+}
+aside #user_info #other_info #user_collection {
+  border-right: 2px solid #333647;
+  float: left;
+}
+aside #user_info #other_info #user_collection #collection_detail {
+  margin-left: 70px;
+}
+aside #user_info #other_info #user_fan {
+  float: right;
+}
+aside #user_info #other_info #user_fan #fan_detail {
+  margin-right: 70px;
+}
+aside #user_list {
+  color: #6c7e94;
+  font-size: 13px;
+  font-family: 'SimHei';
+}
+aside #user_list li {
+  list-style-type: none;
+}
+aside #user_list .user_list_item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+}
+aside #user_list .user_list_item .user_list_image,aside #user_list .user_list_item .user_list_text {
+  vertical-align: middle;
+}
+aside #user_list .user_list_item .user_list_index {
+  margin-left: 10px;
+  color: #6c7e94;
+}
+aside #user_list .user_list_item #user_report_index {
+  color: #ffffff;
+}
+aside #user_list .user_list_item:hover {
+  background-color: #383e4e;
+}
+aside #user_list #user_report #user_report_list {
+  list-style-type: none;
+  color: #6c7e94;
+  font-size: 13px;
+  margin-left: 23px;
+}
+aside #user_list #user_report #user_report_list .user_detail_list_item {
+  padding-top: 15px;
+}
+aside #user_list #user_report #user_report_list .user_list_chosen {
+  color: #ffffff;
+}
+aside #user_list #user_report #user_report_list #user_document_list .user_document {
+  margin-left: 20px;
+  color: #6c7e94;
+}
+/*main*/
+#main {
+  width: 80%;
+  height: 1280px;
+  background-color: #eeeeee;
+  float: right;
+}
+#main #breadcrumb {
+  width: 100%;
+  height: 30px;
+  background-color: #ffffff;
+}
+#main #breadcrumb > ul {
+  height: 100%;
+  padding-left: 30px;
+}
+#main #breadcrumb > ul li {
+  display: inline;
+  list-style-type: none;
+  color: #b7b7b7;
+  font-size: 13px;
+  font-family: 'SimHei';
+  line-height: 30px;
+  height: 30px;
+}
+#main #breadcrumb > ul li + li::before {
+  content: "/";
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#main #breadcrumb > ul .active {
+  color: #2189c0;
+}
+/*main_content*/
+#main #main_content {
+  width: calc(100% - 124px);
+  margin-top: 20px;
+  margin-left: 62px;
+}
+/*content_search*/
+#main #main_content #content_search {
+  background-color: #ffffff;
+  height: 85px;
+  width: 100%;
+  font-size: 13px;
+  font-family: 'SimHei';
+  color: #b7b7b7;
+  position: relative;
+}
+#main #main_content #content_search .search_div {
+  margin-top: 10px;
+  margin-left: 30px;
+  float: left;
+}
+#main #main_content #content_search .search_select {
+  -webkit-appearance: none;
+  font-family: 'SimHei';
+  padding: 5px 0 5px 10px;
+  background-image: url(../images/main/arrow_down_active.png);
+  background-repeat: no-repeat;
+  border-color: #b7b7b7;
+  outline: none;
+}
+#main #main_content #content_search .search_label {
+  margin-right: 10px;
+}
+#main #main_content #content_search #search_item {
+  width: 80px;
+  background-position: 60px;
+}
+#main #main_content #content_search #search_buyer,#main #main_content #content_search #search_seller {
+  width: 130px;
+  background-position: 110px;
+}
+#main #main_content #content_search .search_second_line {
+  margin-top: 5px;
+}
+#main #main_content #content_search #search_date {
+  width: 130px;
+  background-image: none;
+  margin-right: 10px;
+}
+#main #main_content #content_search #search_days {
+  width: 80px;
+  background-position: 60px;
+}
+#main #main_content #content_search #search_people_number {
+  width: 80px;
+  background-position: 55px;
+  margin-right: 10px;
+}
+#main #main_content #content_search #search_item_number {
+  width: 130px;
+  background-position: 110px;
+}
+#main #main_content #content_search #search_btn {
+  background-color: #398ac1;
+  border-width: 0;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: 'SimHei';
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  outline: none;
+  cursor: pointer;
+}
+/*content_history*/
+#main #main_content #content_history {
+  width: 100%;
+  margin-top: 10px;
+  overflow: auto;
+}
+#main #main_content #content_history .history_div {
+  background-color: #ffffff;
+  height: 65px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main #main_content #content_history .history_div + .history_div  {
+  margin-left: 13px;
+}
+#main #main_content #content_history #history_back,#main #main_content #content_history #history_advance {
+  width: 30px;
+}
+#main #main_content #content_history .history_div #history_back_img {
+  margin-left: 7px;
+  cursor: pointer;
+}
+#main #main_content #content_history .history_div #history_advance_img {
+  margin-right: 7px;
+  cursor: pointer;
+}
+#main #main_content #content_history .history_daytime {
+  width: 110px;
+  text-align: center;
+  box-sizing: border-box;
+}
+#main #main_content #content_history .history_active {
+  border-top: 3px solid #398ac1;
+}
+#main #main_content #content_history .history_daytime .history_time {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+#main #main_content #content_history .history_price {
+  color: #ec6400;
+  font-size: 20px;
+}
+#main #main_content #content_history .history_price .renminbi {
+  color: #aaaaaa;
+  font-size: 16px;
+}
+#main #main_content #content_history #history_calendar {
+  width: 130px;
+  font-family: 'SimHei';
+  text-align: center;
+  display: block;
+  position: relative;
+}
+#main #main_content #content_history #history_calendar > span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+#main #main_content #content_history #history_calendar > img {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+/*content_statistics*/
+#main #main_content #content_statistics {
+  width: 100%;
+  margin-top: 20px;
+  overflow: auto;
+}
+#main #main_content #content_statistics #statistics_title {
+  font-size: 13px;
+}
+#main #main_content #content_statistics .statistics_div {
+  width: 23%;
+  height: 70px;
+  background-color: #ffffff;
+  margin-top: 5px;
+  float: left;
+  box-sizing: border-box;
+  border-left-width: 4px;
+  border-left-style: solid;
+  position: relative;
+}
+#main #main_content #content_statistics .statistics_div + .statistics_div {
+  margin-left: 25px;
+}
+#main #main_content #content_statistics .statistics_div .statistics_summary,
+#main #main_content #content_statistics .statistics_div .statistics_square {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main #main_content #content_statistics .statistics_div .statistics_summary {
+  left: 15px;
+}
+#main #main_content #content_statistics .statistics_div .statistics_summary .statistics_number {
+  font-size: 13px;
+  font-family: 'SimHei';
+  margin-bottom: 10px;
+}
+#main #main_content #content_statistics .statistics_div .statistics_summary .statistics_desc {
+  font-size: 10px;
+  color: #ababab;
+}
+#main #main_content #content_statistics .statistics_div .statistics_square {
+  height: 45px;
+  width: 60px;
+  right: 20px;
+}
+#main #main_content #content_statistics #statistics_first {
+  border-left-color: #43b29f;
+}
+#main #main_content #content_statistics #statistics_first .statistics_square {
+  background-color: #43b29f;
+}
+#main #main_content #content_statistics #statistics_second {
+  border-left-color: #398ac1;
+}
+#main #main_content #content_statistics #statistics_second .statistics_square {
+  background-color: #398ac1;
+}
+#main #main_content #content_statistics #statistics_third {
+  border-left-color: #cf4b36;
+}
+#main #main_content #content_statistics #statistics_third .statistics_square {
+  background-color: #cf4b36;
+}
+#main #main_content #content_statistics #statistics_fourth {
+  border-left-color: #e1cd46;
+}
+#main #main_content #content_statistics #statistics_fourth .statistics_square {
+  background-color: #e1cd46;
+}
+/*content_item*/
+#main #main_content #content_item {
+  width: 100%;
+  margin-top: 15px;
+  overflow: auto;
+}
+#main #main_content #content_item .item_div {
+  height: 355px;
+  float: left;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+#main #main_content #content_item #content_item_detail {
+  width: 60%;
+  margin-right: 10px;
+  position: relative;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+#main #main_content #content_item #content_item_detail * {
+  box-sizing: border-box;
+}
+#main #main_content #content_item h3 {
+  width: 100%;
+  height: 40px;
+  background-color: #f4f5f7;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-family: 'SimHei';
+  font-weight: normal;
+  line-height: 40px;
+  text-indent: 1em;
+}
+#main #main_content #content_item #item_material li {
+  float: left;
+  list-style-type: none;
+}
+#main #main_content #content_item #item_material .material_active {
+  margin-left: 5%;
+}
+#main #main_content #content_item #item_material li + li {
+  margin-left: 5px;
+}
+#main #main_content #content_item #item_material input {
+  -webkit-appearance: none;
+}
+#main #main_content #content_item #item_material label {
+  display: block;
+  width: 90px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ededf0;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -6px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#main #main_content #content_item #item_material .table_div {
+  display: none;
+}
+#main #main_content #content_item #item_material .table_div > table {
+  width: 80%;
+  text-align: center;
+  line-height: 30px;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-left: 10%;
+}
+#main #main_content #content_item #item_material .table_div  table  td {
+  border: 1px solid #cacbcb;
+}
+#main #main_content #content_item #item_material input:checked~label {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border: 1px solid #cacbcb;
+  box-sizing: content-box;
+  border-bottom: none;
+}
+#main #main_content #content_item #item_material input:checked~[class="table_div"] {
+  display: block;
+  position: absolute;
+  width: 90%;
+  border: 1px solid #cacbcb;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  top: 80px;
+  padding: 30px 0;
+}
+#main #main_content #content_item #content_item_summary {
+  width: calc(40% - 10px);
+}
+#main #main_content #content_item #content_item_summary #item_summary_container{
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container .project_summary {
+  width: 100%;
+  border-bottom: 1px solid #cacbcb;
+  overflow: auto;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container .project_label {
+  color: #c7c7c7;
+  font-size: 13px;
+  font-family: 'SimHei';
+}
+#main #main_content #content_item #content_item_summary #item_summary_container .project_input {
+  -webkit-appearance: none;
+  border-width: 0;
+  outline: none;
+  padding: 5px 0;
+  width: 100%;
+  font-size: 13px;
+  font-family: 'SimHei';
+}
+#main #main_content #content_item #content_item_summary #item_summary_container .project_input::-webkit-input-placeholder {
+  color: #000000;
+  font-size: 13px;
+  font-family: 'SimHei';
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_price_div {
+  box-sizing: border-box;
+  width: 30%;
+  float: left;
+  border-right: 1px solid #cacbcb;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_principal_div {
+  box-sizing: border-box;
+  width: 70%;
+  float: left;
+  padding-left: 10px;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_desc {
+  resize: none;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_security {
+  float: left;
+  margin-top: 5px;
+  height: 20px;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_security #security_check {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #c7c7c7;
+  outline: none;
+  vertical-align: middle;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_security #security_check:checked {
+  background-image: url(../images/main/checked.png);
+  background-repeat: no-repeat;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_security #security_text {
+  font-size: 13px;
+  font-family: 'SimHei';
+  color: #c7c7c7;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+#main #main_content #content_item #content_item_summary #item_summary_container #project_search_btn {
+  background-color: #398ac1;
+  border-width: 0;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: 'SimHei';
+  width: 60px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 5px;
+}
+/*content_other*/
+#main #main_content #content_other {
+  width: 100%;
+  margin-top: 15px;
+  overflow: auto;
+}
+#main #main_content #content_other .other_div {
+  background-color: #ffffff;
+  height: 355px;
+  float: left;
+}
+#main #main_content #content_other .other_div h3 {
+  width: 100%;
+  height: 40px;
+  background-color: #f4f5f7;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-family: 'SimHei';
+  font-weight: normal;
+  line-height: 40px;
+  text-indent: 1em;
+}
+#main #main_content #content_other #other_calendar {
+  width: calc(40% - 10px);
+  margin-right: 10px;
+}
+#main #main_content #content_other #other_calendar #calendar_select {
+  width: 88%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 2px solid #7fcaf1;
+}
+#main #main_content #content_other #other_calendar #calendar_select .calendar_select {
+  -webkit-appearance: none;
+  height: 20px;
+  font-size: 12px;
+  font-family: 'SimHei';
+  line-height: 20px;
+  outline: none;
+  box-sizing: border-box;
+}
+#main #main_content #content_other #other_calendar #calendar_select #calendar_year {
+  padding-left: 5px;
+  width: 20%;
+  background-image: url(../images/main/calendar_select.png);
+  background-repeat: no-repeat;
+  background-position: 50px;
+}
+#main #main_content #content_other #other_calendar #calendar_select #calendar_month {
+  width: 27%;
+  padding-left: 20px;
+  background-image: url(../images/main/calendar_select.png);
+  background-repeat: no-repeat;
+  background-position: 60px;
+}
+#main #main_content #content_other #other_calendar #calendar_select #calendar_day {
+  width: 23%;
+  padding-left: 5px;
+  background-image: url(../images/main/calendar_select.png);
+  background-repeat: no-repeat;
+  background-position: 60px;
+}
+#main #main_content #content_other #other_calendar #calendar_select #dayback_btn {
+  height: 20px;
+  width: 25%;
+  border: 1px solid #cacbcb;
+  background-color: #ffffff;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+#main #main_content #content_other #other_calendar #calendar_table {
+  width: 88%;
+  margin: 0 auto;
+  font-family: 'SimHei';
+}
+#main #main_content #content_other #other_calendar #calendar_table th {
+  font-weight: normal;
+  font-size: 15px;
+  height: 30px;
+  width: 45px;
+  border-bottom: 1px solid #cacbcb;
+}
+#main #main_content #content_other #other_calendar #calendar_table td {
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  height: 45px;
+  width: 45px;
+  box-sizing: border-box;
+}
+#main #main_content #content_other #other_calendar #calendar_table .special {
+  border: 1px solid #f8d464;
+}
+#main #main_content #content_other #other_calendar #calendar_table td .festival {
+  color: #cc353a;
+}
+#main #main_content #content_other #other_calendar #calendar_table td .weekend {
+  color: #cc353a;
+}
+#main #main_content #content_other #other_brand {
+  width: 60%;
+}
+#main #main_content #content_other #other_brand #brand_table {
+  width: 88%;
+  margin-left: 6%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-family: 'SimHei';
+}
+#main #main_content #content_other #other_brand #brand_table tr:hover {
+  background-color: #f4f5f7;
+}
+#main #main_content #content_other #other_brand #brand_table th {
+  border: 1px solid #cacbcb;
+  font-size: 14px;
+  font-weight: normal;
+  height: 24px;
+}
+#main #main_content #content_other #other_brand #brand_table td {
+  border: 1px solid #cacbcb;
+  font-size: 13px;
+  height: 24px;
+  text-align: center;
+  box-sizing: border-box;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_rank {
+  width: 15%;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_name {
+  width: 20%;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index {
+  text-align: left;
+  padding-left: 30px;
+  position: relative;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_number {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph {
+  width: 60%;
+  height: 4px;
+  background-color: #dddddd;
+  position: absolute;
+  left: 95px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #dazhong_graph {
+  width: 85%;
+  height: 100%;
+  background-color: #ed6d50;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #toyota_graph {
+  width: 75%;
+  height: 100%;
+  background-color: #ef8150;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #audi_graph {
+  width: 68%;
+  height: 100%;
+  background-color: #f19e4e;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #honda_graph {
+  width: 60%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #ford_graph {
+  width: 52%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #bmw_graph {
+  width: 45%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #hyundai_graph {
+  width: 38%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #kia_graph {
+  width: 30%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #benz_graph {
+  width: 25%;
+  height: 100%;
+  background-color: #7fcbef;
+}
+#main #main_content #content_other #other_brand #brand_table .brand_index .index_graph  #buick_graph {
+  width: 20%;
+  height: 100%;
+  background-color: #7fcbef;
+}
