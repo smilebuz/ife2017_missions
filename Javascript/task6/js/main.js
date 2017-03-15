@@ -60,8 +60,15 @@ function lastIn() {
     alert("请输入有效内容");
     return false;
   } else {
+    //输入正则
+    var pattern_input = new RegExp("[,，\\.\\\n、 　]","g");
+    //正则分隔输入字符串
+    inputs = input.split(pattern_input);
     clearQueue();
-    contents.push(input);
+    for (var i = 0; i < inputs.length; i++) {
+      console.log("输入"+i+": "+inputs[i]);
+      contents.push(inputs[i]);
+    }
     queueSimulation();
   }
 }
