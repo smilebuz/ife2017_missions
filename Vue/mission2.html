@@ -1,0 +1,93 @@
+<script>
+  let EventManager = (function () {
+    let event = {
+      eventCache: {},
+
+      listener: function (key, fn) {
+        if (this.eventCache[key] === undefined) {
+          this.eventCache[key] = []
+        }
+        this.eventCache[key].push(fn)
+      },
+
+      trigger: function () {
+        let key = Array.prototype.shift.call(arguments)
+        let args = arguments
+        if (this.eventCache[key] === undefined || this.eventCache[key].length === 0) {
+          return
+        }
+        let functions = this.eventCache[key]
+        functions.forEach(fn => {
+          fn(args[0])
+        })
+      }
+    }
+
+    return event
+  })()
+
+  function Observer(data) {
+    this.data = data
+    this.walk(data)
+    this.cb
+  }
+
+  Observer.prototype.$watch = function (key, fn) {
+    EventManager.listener(key, fn)
+  }
+
+  Observer.prototype.walk = function (data) {
+    for (let key in data) {
+      if (data.hasOwnProperty(key)) {
+        let val = data[key]
+        if (typeof val === "object") {
+          new Observer(val)
+        }
+
+        this.convert(key, val)
+      }
+    }
+  }
+
+  Observer.prototype.convert = function (key, val) {
+    Object.defineProperty(this.data, key, {
+      enumerable: true,
+      configurable: true,
+      get: function () {
+        console.log("你访问了", key)
+        return val
+      },
+      set: function (newVal) {
+        console.log("你设置了", key, "新的值为", newVal)
+        EventManager.trigger(key, newVal)
+        if (newVal !== val) {
+          val = newVal
+          if (typeof newVal === "object") {
+            new Observer(newVal)
+          }
+        }
+      }
+    })
+  }
+
+  let app1 = new Observer({
+    name: 'youngwind',
+    age: 25
+  })
+
+  app1.data.name = {
+    lastName: 'liang',
+    firstName: 'shaofeng'
+  }
+
+  app1.data.name.lastName
+  app1.data.name.firstName = "lalala"
+  app1.data.age = 100
+
+  // 你需要实现 $watch 这个 API
+  app1.$watch('age', function(age) {
+    console.log(`我的年纪变了，现在已经是：${age}岁了`)
+  })
+  app1.data.age = 100; // 输出：'我的年纪变了，现在已经是100岁了'
+
+</script>
