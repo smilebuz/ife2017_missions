@@ -1,0 +1,133 @@
+<script>
+  let EventManager = (function () {
+    let event = {
+      eventCache: {},
+
+      // 订阅
+      on: function (key, fn) {
+        if (this.eventCache[key] === undefined) {
+          this.eventCache[key] = []
+        }
+        this.eventCache[key].push(fn)
+      },
+
+      // 发布
+      emit: function (path) {
+        // path 路径 向上传播
+        // 从path中解析出key
+        console.log("emit", path)
+        let keys = path.split(".")
+        let depPaths = keys.map(function (key, index) {
+          if (index === 0) {
+            return key
+          } else {
+            let str = ""
+            while (index--) {
+              str = keys[index] + "." + str
+            }
+            return str + key
+          }
+        })
+        depPaths.forEach(function (depPath) {
+          let fns = this.eventCache[depPath]
+          if (fns) {
+            fns.forEach(function (fn) {
+              fn && fn(function (depPath) {
+                path = depPath.split(".")
+                let val = this.data
+                path.forEach(function(elem) {
+                  val = val[elem]
+                })
+                return val
+              })
+            })
+          }
+        })
+        // if (this.eventCache[key] === undefined || this.eventCache[key].length === 0) {
+        //   return
+        // }
+        // let functions = this.eventCache[key]
+        // functions.forEach(fn => {
+        //   fn(value)
+        // })
+      }
+    }
+
+    return event
+  })()
+
+  function Observer(data) {
+    this.data = data
+    this.walk(data)
+  }
+
+  // path 递归构建path
+  Observer.prototype.walk = function (data, paths) {
+    for (let key in data) {
+      if (data.hasOwnProperty(key)) {
+        let val = data[key]
+        let path = "" // 初始化path
+        if (!paths) {
+          // 一级目录
+          path += key
+        } else {
+          path += paths + key
+        }
+
+        if (typeof val === 'object') {
+          this.walk(val, path + '.')
+        }
+
+        this.convert(key, val, path)
+      }
+    }
+  }
+
+  Observer.prototype.convert = function (key, val, paths) {
+    console.log("convert", paths)
+    let self = this
+    Object.defineProperty(this.data, key, {
+      enumerable: true,
+      configurable: true,
+      get: function () {
+        console.log("你访问了", key)
+        return val
+      },
+      set: function (newVal) {
+        console.log("你设置了", key, "新的值为", newVal)
+        if (val !== newVal) {
+          val = newVal
+          EventManager.emit(paths)
+          if (typeof newVal === 'object') {
+            if (paths) {
+              paths += "."
+            }
+            self.walk(newVal, paths)
+          }
+        }
+      }
+    })
+  }
+
+  Observer.prototype.$watch = function (key, fn) {
+    EventManager.on(key, fn)
+  }
+
+  let app2 = new Observer({
+    name: {
+        firstName: 'shaofeng',
+        lastName: 'liang'
+    },
+    age: 25
+  })
+
+  app2.$watch('name', function (newName) {
+    console.log('我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。')
+  })
+
+  app2.data.name.firstName = 'hahaha';
+  // 输出：我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。
+  app2.data.name.lastName = 'blablabla';
+  // 输出：我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。
+
+</script>

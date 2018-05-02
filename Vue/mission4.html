@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue模版渲染</title>
+</head>
+<body>
+  <div id="app">
+    <p>姓名: {{user.name}}</p>
+    <p>年龄: {{user.age}}</p>
+  </div>
+  <script>
+    let regexp = /{{[A-Za-z.]*}}/g
+    function Vue(obj) {
+      this.data = obj.data
+      this.children = document.querySelectorAll(obj.el + " *") // container中所有子节点
+      this.children.forEach(child => {
+        let text = child.innerText
+        // 正则匹配
+        let replaceText = text.match(regexp)[0] // 替换掉的部分
+        let key = replaceText.slice(2, replaceText.length - 2) // key
+        let parseValue = this.parseHTML(key, this.data)
+        this.render(child, parseValue)
+      })
+    }
+    Vue.prototype.parseHTML = function(keys, data) {
+      let keyArr = keys.split(".")
+      if (keyArr.length === 1) {
+        return data[keyArr[0]]
+      }
+      keyArr.unshift(data)
+      return keyArr.reduce((prev, curr) => {
+        return prev[curr]
+      })
+    }
+    Vue.prototype.render = function (dom, value) {
+      let text = dom.innerText
+      // 正则匹配替换
+      dom.innerText = text.replace(regexp, value)
+    }
+    let app = new Vue({
+      el: '#app',
+      data: {
+        user: {
+          name: 'youngwind',
+          age: 25
+        }
+      }
+    })
+  </script>
+</body>
+</html>
